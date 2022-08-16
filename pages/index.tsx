@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Navbar from './components/Navbar';
+import { Hero, Navbar } from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -13,13 +13,7 @@ const Home: NextPage = () => {
 
       <main className="container font-body mx-auto min-h-full">
         <Navbar />
-        <h1 className="font-title text-4xl py-6">Welcome to my website!</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, quia
-          nostrum voluptas libero voluptatem saepe voluptates dignissimos odio
-          labore maiores est, itaque deleniti, soluta optio corrupti cupiditate
-          consequuntur qui ullam?
-        </p>
+        <Hero />
       </main>
     </>
   );
