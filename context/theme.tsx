@@ -10,7 +10,7 @@ type Props = {
 };
 
 const defaultState = {
-  dark: false,
+  dark: true,
 };
 
 const ThemeContext = createContext<IThemeContext>(defaultState);
