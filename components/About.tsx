@@ -21,7 +21,7 @@ const About = () => {
           <div className="relative flex items-center bg-base-300 rounded-lg">
             <span className="hidden lg:inset-y-0 lg:absolute lg:w-16 bg-base-300 lg:block lg:-left-12 rounded-lg"></span>
             <div className="p-8 sm:p-16">
-              <h2 className="text-2xl font-title sm:text-3xl">About Me</h2>
+              <h2 className="text-2xl font-title sm:text-4xl">About Me</h2>
 
               <p className="text-base lg:text-lg pt-4 pb-6 leading-relaxed">
                 I'm a
@@ -29,7 +29,7 @@ const About = () => {
                   href="https://en.wikipedia.org/wiki/Mechatronics"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline decoration-2 decoration-indigo-500 px-1"
+                  className="relative text-indigo-600 px-1 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100"
                 >
                   mechatronics
                 </a>
