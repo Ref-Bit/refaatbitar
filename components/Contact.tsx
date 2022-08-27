@@ -2,6 +2,7 @@ import Image from 'next/image';
 import ContactImage from '../public/images/contact.png';
 import { motion } from 'framer-motion';
 import variants from './variants';
+import CTAButton from './partials/CTAButton';
 
 const Contact = () => {
   return (
@@ -16,24 +17,7 @@ const Contact = () => {
           >
             Let's Work Together!
           </motion.h1>
-          <a href="mailto:refaatbitar@gmail.com">
-            <motion.button
-              variants={variants().contact.button}
-              initial="hidden"
-              whileInView="visible"
-              className="btn-cta-primary"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-2 w-2 md:h-5 md:w-5 animate-pulse"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
-              </svg>
-              Hire Me
-            </motion.button>
-          </a>
+          <CTAButton variants={variants().contact.button} />
         </div>
         <div className="relative">
           <motion.div variants={variants().contact.image} whileInView="visible">
@@ -43,7 +27,7 @@ const Contact = () => {
             variants={variants().hero.logos}
             initial="hidden"
             whileInView="visible"
-            viewport={{margin: "0px 0px 400px 0px"}}
+            viewport={{ margin: '0px 0px 400px 0px' }}
           >
             <motion.div
               variants={variants().hero.logo}

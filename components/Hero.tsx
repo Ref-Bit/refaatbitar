@@ -12,6 +12,7 @@ import {
 } from '../public/images';
 import { motion } from 'framer-motion';
 import variants from './variants';
+import CTAButton from './partials/CTAButton';
 
 const Hero = () => {
   const { dark } = useContext(ThemeContext);
@@ -41,7 +42,7 @@ const Hero = () => {
               variants={variants().hero.list}
               initial="hidden"
               whileInView="visible"
-              className="pt-2 leading-relaxed"
+              className="pt-2 mb-6 leading-relaxed"
             >
               <motion.li
                 className="flex items-center"
@@ -58,22 +59,7 @@ const Hero = () => {
                 <p>APIs with Nodejs and PHP</p>
               </motion.li>
             </motion.ul>
-            <motion.button
-              variants={variants().hero.button}
-              initial="hidden"
-              whileInView="visible"
-              className="btn-cta-primary mt-6"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-2 w-2 md:h-5 md:w-5 animate-pulse"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
-              </svg>
-              Hire Me
-            </motion.button>
+            <CTAButton variants={variants().hero.button} />
           </div>
         </div>
         <div className="relative">
