@@ -5,7 +5,7 @@ export default function (dark?: boolean) {
     hero: {
       title: {
         hidden: {
-          x: '-100vw',
+          x: -100,
           color: '#6419E6',
           transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
         },
@@ -69,6 +69,34 @@ export default function (dark?: boolean) {
         visible: {
           y: 0,
           transition: { repeat: Infinity, repeatType: 'reverse', duration: 1 },
+        },
+      },
+    },
+    about: {
+      image: {
+        hidden: {
+          x: -100,
+          transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+        },
+        visible: {
+          x: 0,
+          transition: {
+            ease: [0.455, 0.03, 0.515, 0.955],
+            duration: 0.75,
+          },
+        },
+      },
+      description: {
+        hidden: {
+          x: 100,
+          transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+        },
+        visible: {
+          x: 0,
+          transition: {
+            ease: [0.455, 0.03, 0.515, 0.955],
+            duration: 0.75,
+          },
         },
       },
     },

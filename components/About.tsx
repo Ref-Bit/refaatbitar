@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { AboutImage } from '../public/images';
+import { motion } from 'framer-motion';
+import variants from './variants';
 
 const About = () => {
   return (
@@ -7,7 +9,13 @@ const About = () => {
       <div className="py-16 mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[90vh]">
           <div className="relative z-10 mx-auto left-0 bottom-10 lg:py-16 lg:left-16 lg:bottom-8">
-            <div className="relative h-64 sm:h-80">
+            <motion.div
+              variants={variants().about.image}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ margin: '250px 0px 0px 0px' }}
+              className="relative h-64 sm:h-80"
+            >
               <Image
                 src={AboutImage}
                 alt="about"
@@ -15,10 +23,16 @@ const About = () => {
                 width={600}
                 height={600}
               />
-            </div>
+            </motion.div>
           </div>
 
-          <div className="relative flex items-center bg-base-300 rounded-lg">
+          <motion.div
+            variants={variants().about.description}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ margin: '250px 0px 0px 0px' }}
+            className="relative flex items-center bg-base-300 rounded-lg"
+          >
             <span className="hidden lg:inset-y-0 lg:absolute lg:w-16 bg-base-300 lg:block lg:-left-12 rounded-lg"></span>
             <div className="p-8 sm:p-16">
               <h2 className="text-2xl font-title sm:text-4xl">About Me</h2>
@@ -57,7 +71,7 @@ const About = () => {
                 Download CV
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

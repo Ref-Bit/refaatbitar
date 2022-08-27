@@ -25,7 +25,8 @@ const Hero = () => {
           <motion.h1
             variants={variants(dark).hero.title}
             initial="hidden"
-            animate={replay ? 'visible' : 'hidden'}
+            whileInView="visible"
+            // animate={replay ? 'visible' : 'hidden'}
             className="font-title text-3xl lg:text-7xl py-6 leading-snug"
           >
             Hello World, <br />
@@ -35,14 +36,16 @@ const Hero = () => {
             <motion.p
               variants={variants().hero.text}
               initial="hidden"
-              animate={replay ? 'visible' : 'hidden'}
+              whileInView="visible"
+              // animate={replay ? 'visible' : 'hidden'}
             >
               A full-stack developer specializing in building:
             </motion.p>
             <motion.ul
               variants={variants().hero.list}
               initial="hidden"
-              animate={replay ? 'visible' : 'hidden'}
+              whileInView="visible"
+              // animate={replay ? 'visible' : 'hidden'}
               className="pt-2 leading-relaxed"
             >
               <motion.li
@@ -89,14 +92,16 @@ const Hero = () => {
         <div className="relative">
           <motion.div
             variants={variants().hero.image}
-            animate={replay ? 'visible' : 'hidden'}
+            whileInView="visible"
+            // animate={replay ? 'visible' : 'hidden'}
           >
             <Image src={HeroImage} alt="Hello World" width={500} height={500} />
           </motion.div>
           <motion.div
             variants={variants().hero.logos}
             initial="hidden"
-            animate={replay ? 'visible' : 'hidden'}
+            whileInView="visible"
+            // animate={replay ? 'visible' : 'hidden'}
           >
             <motion.div
               // @ts-ignore
