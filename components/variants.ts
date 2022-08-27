@@ -120,5 +120,39 @@ export default function (dark?: boolean) {
         },
       },
     },
+    contact: {
+      title: {
+        hidden: {
+          x: -100,
+        },
+        visible: {
+          x: 0,
+          transition: {
+            type: 'spring',
+            duration: 0.75,
+          },
+        },
+      },
+      button: {
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            type: 'spring',
+            duration: 0.75,
+            delay: 0.5,
+          },
+        },
+      },
+      image: <Variants>{
+        hidden: {
+          scale: 0.8,
+        },
+        visible: {
+          scale: 1.1,
+          transition: { repeat: 3, repeatType: 'reverse', duration: 1 },
+        },
+      },
+    },
   };
 }
