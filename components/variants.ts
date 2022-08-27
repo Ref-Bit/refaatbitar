@@ -27,6 +27,7 @@ export default function (dark?: boolean) {
           },
         },
       },
+
       list: {
         hidden: {
           opacity: 0,
@@ -43,6 +44,16 @@ export default function (dark?: boolean) {
         hidden: { opacity: 0 },
         visible: { opacity: 1 },
       },
+      button: {
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            delay: 1,
+          },
+        },
+      },
       image: <Variants>{
         hidden: {
           rotate: 0,
@@ -52,7 +63,7 @@ export default function (dark?: boolean) {
           transition: { repeat: 3, repeatType: 'reverse', duration: 1 },
         },
       },
-      logos: {
+      logos: <Variants>{
         hidden: {
           opacity: 0,
         },
@@ -64,7 +75,7 @@ export default function (dark?: boolean) {
           },
         },
       },
-      logo: {
+      logo: <Variants>{
         hidden: { y: '-1rem' },
         visible: {
           y: 0,
