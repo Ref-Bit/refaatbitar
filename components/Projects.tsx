@@ -64,6 +64,7 @@ const Projects = () => {
                         width={500}
                         height={500}
                         quality={100}
+                        layout="responsive"
                         objectFit="cover"
                         alt={`${project.name}-showcase`}
                       />
