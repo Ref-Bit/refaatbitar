@@ -3,7 +3,7 @@ import useSWR, { Fetcher } from 'swr';
 import ImageWithFallback from '../lib/ImageWithFallback';
 import FallbackImage from '../public/images/fallback.png';
 import { motion } from 'framer-motion';
-import variants from './variants';
+import {customVariants} from './variants';
 
 interface IProject {
   name: string;
@@ -28,7 +28,7 @@ const Projects = () => {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <motion.h1
-            variants={variants().projects.title}
+            variants={customVariants().projects.title}
             initial="hidden"
             whileInView="visible"
             viewport={{ margin: '0px 0px 0px 0px' }}
@@ -44,7 +44,7 @@ const Projects = () => {
             </div>
           ) : (
             <motion.div
-              variants={variants().hero.list}
+              variants={customVariants().hero.list}
               initial="hidden"
               whileInView="visible"
               viewport={{ margin: '-10px 0px 0px 0px' }}
@@ -53,7 +53,7 @@ const Projects = () => {
               {data ? (
                 data?.map(project => (
                   <motion.div
-                    variants={variants().hero.item}
+                    variants={customVariants().hero.item}
                     className="p-4 lg:w-1/3"
                     key={project.name}
                   >

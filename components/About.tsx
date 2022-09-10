@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { AboutImage } from '../public/images';
 import { motion } from 'framer-motion';
-import variants from './variants';
+import { customVariants } from './variants';
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:h-[90vh]">
           <div className="relative z-10 mx-auto left-0 bottom-10 lg:py-16 lg:left-16 lg:bottom-8">
             <motion.div
-              variants={variants().about.image}
+              variants={customVariants().about.image}
               initial="hidden"
               whileInView="visible"
               viewport={{ margin: '250px 0px 0px 0px' }}
@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           <motion.div
-            variants={variants().about.description}
+            variants={customVariants().about.description}
             initial="hidden"
             whileInView="visible"
             viewport={{ margin: '250px 0px 0px 0px' }}
@@ -38,26 +38,27 @@ const About = () => {
               <h2 className="text-2xl font-title sm:text-4xl">About Me</h2>
 
               <p className="text-base lg:text-lg pt-4 pb-6 leading-relaxed">
-                I'm a
+                {`I'm a`}
                 <a
                   href="https://en.wikipedia.org/wiki/Mechatronics"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative text-indigo-600 px-1 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100"
                 >
-                  mechatronics
+                  {`mechatronics`}
                 </a>
-                engineer with an experience in Embedded Systems programming and
+                {`engineer with an experience in Embedded Systems programming and
                 Industrial 3D design. Currently, I'm working in the Web
                 Development field, particularly with React and Nodejs powered
-                with Typescript.
+                with Typescript.`}
                 <br />
-                <br /> Also, I have worked previously with PHP (Laravel,
+                <br />
+                {`Also, I have worked previously with PHP (Laravel,
                 WordPress), Vuejs, and Svelte. In addition, I built my DevOps
                 skills using tools such as Git, Docker, Kubernetes, and Google
                 Cloud (Dialogflow). Moreover, I use MySQL daily to create custom
                 reports in platforms like Grafana and develop API services
-                between CRMs.
+                between CRMs.`}
               </p>
               <a className="btn btn-primary gap-2" href="/CV.pdf" download>
                 <svg

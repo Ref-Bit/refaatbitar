@@ -1,25 +1,45 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function ImageFallback({ src, fallbackSrc, ...rest }: any) {
-  const [imgSrc, set_imgSrc] = useState(src);
+interface IProps {
+  src: string;
+  fallbackSrc: StaticImageData;
+  alt: string;
+  width: number;
+  height: number;
+  quality: number;
+  objectFit: string;
+}
+
+export default function ImageFallback({
+  src,
+  fallbackSrc,
+  alt,
+  width,
+  height,
+  quality,
+  objectFit,
+  ...rest
+}: IProps) {
+  const [imgSrc, setImgSrc] = useState<string | StaticImageData>(src);
 
   useEffect(() => {
-    set_imgSrc(src);
+    setImgSrc(src);
   }, [src]);
 
   return (
     <Image
       {...rest}
       src={imgSrc}
+      alt={alt || 'fallback'}
       onLoadingComplete={result => {
         if (result.naturalWidth === 0) {
           // Broken image
-          set_imgSrc(fallbackSrc);
+          setImgSrc(fallbackSrc);
         }
       }}
       onError={() => {
-        set_imgSrc(fallbackSrc);
+        setImgSrc(fallbackSrc);
       }}
     />
   );

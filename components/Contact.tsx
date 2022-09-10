@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ContactImage from '../public/images/contact.png';
 import { motion } from 'framer-motion';
-import variants from './variants';
+import {customVariants} from './variants';
 import CTAButton from './partials/CTAButton';
 
 const Contact = () => {
@@ -10,27 +10,32 @@ const Contact = () => {
       <div className="flex items-center justify-between">
         <div className="flex flex-col items-start px-5">
           <motion.h1
-            variants={variants().contact.title}
+            variants={customVariants().contact.title}
             initial="hidden"
             whileInView="visible"
             className="flex-grow sm:pr-16 text-2xl md:text-4xl font-title py-6"
           >
-            Let's Work Together!
+            {`Let's Work Together!`}
           </motion.h1>
-          <CTAButton variants={variants().contact.button} />
+          <CTAButton variants={customVariants().contact.button} />
         </div>
         <div className="relative">
-          <motion.div variants={variants().contact.image} whileInView="visible">
-            <Image src={ContactImage} width={500} height={500} />
+          <motion.div variants={customVariants().contact.image} whileInView="visible">
+            <Image
+              src={ContactImage}
+              width={500}
+              height={500}
+              alt={`contact-hero`}
+            />
           </motion.div>
           <motion.div
-            variants={variants().hero.logos}
+            variants={customVariants().hero.logos}
             initial="hidden"
             whileInView="visible"
             viewport={{ margin: '0px 0px 400px 0px' }}
           >
             <motion.div
-              variants={variants().hero.logo}
+              variants={customVariants().hero.logo}
               className="absolute top-24 z-10 "
             >
               <a
@@ -50,7 +55,7 @@ const Contact = () => {
               </a>
             </motion.div>
             <motion.div
-              variants={variants().hero.logo}
+              variants={customVariants().hero.logo}
               className="absolute bottom-10 left-10 lg:bottom-20"
             >
               <a
@@ -73,7 +78,7 @@ const Contact = () => {
               </a>
             </motion.div>
             <motion.div
-              variants={variants().hero.logo}
+              variants={customVariants().hero.logo}
               className="absolute top-24 right-0"
             >
               <a
@@ -98,7 +103,7 @@ const Contact = () => {
               </a>
             </motion.div>
             <motion.div
-              variants={variants().hero.logo}
+              variants={customVariants().hero.logo}
               className="absolute bottom-20 right-0"
             >
               <a

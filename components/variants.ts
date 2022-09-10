@@ -1,6 +1,6 @@
 import { Variants } from 'framer-motion';
 
-export default function (dark?: boolean) {
+export function customVariants (dark?: boolean) {
   return {
     hero: {
       title: {
