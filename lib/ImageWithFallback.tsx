@@ -1,24 +1,16 @@
-import Image, { StaticImageData } from 'next/image';
+import Image, { ImageProps, StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 
-interface IProps {
+interface IProps extends ImageProps {
   src: string;
   fallbackSrc: StaticImageData;
   alt: string;
-  width: number;
-  height: number;
-  quality: number;
-  objectFit: string;
 }
 
 export default function ImageFallback({
   src,
   fallbackSrc,
   alt,
-  width,
-  height,
-  quality,
-  objectFit,
   ...rest
 }: IProps) {
   const [imgSrc, setImgSrc] = useState<string | StaticImageData>(src);

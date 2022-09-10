@@ -61,8 +61,8 @@ const Projects = () => {
                       <ImageWithFallback
                         src={`https://raw.githubusercontent.com/Ref-Bit/${project.name}/master/public/showcase.png`}
                         fallbackSrc={FallbackImage}
-                        width={750}
-                        height={750}
+                        width={500}
+                        height={500}
                         quality={100}
                         objectFit="cover"
                         alt={`${project.name}-showcase`}
