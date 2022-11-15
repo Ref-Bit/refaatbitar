@@ -38,27 +38,12 @@ const About = () => {
               <h2 className="text-2xl font-title sm:text-4xl">About Me</h2>
 
               <p className="text-base lg:text-lg pt-4 pb-6 leading-relaxed">
-                {`I'm a`}
-                <a
-                  href="https://en.wikipedia.org/wiki/Mechatronics"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative text-indigo-600 px-1 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-indigo-600 before:transition hover:before:scale-100"
-                >
-                  {`mechatronics`}
-                </a>
-                {`engineer with an experience in Embedded Systems programming and
-                Industrial 3D design. Currently, I'm working in the Web
-                Development field, particularly with React and Nodejs powered
-                with Typescript.`}
+                {`I’m an experienced Full-stack Developer with 3+ years of hands-on experience. I build web applications/websites with React and Nodejs powered by Typescript and develop APIs and event-driven design services to be integrated into CRMs.
+                `}
                 <br />
                 <br />
-                {`Also, I have worked previously with PHP (Laravel,
-                WordPress), Vuejs, and Svelte. In addition, I built my DevOps
-                skills using tools such as Git, Docker, Kubernetes, and Google
-                Cloud (Dialogflow). Moreover, I use MySQL daily to create custom
-                reports in platforms like Grafana and develop API services
-                between CRMs.`}
+                {`Furthermore, I have worked previously with PHP (Laravel, WordPress), Vue, and Svelte. In addition, I boosted my DevOps skills using tools such as Git, Docker, Kubernetes, and Google Cloud (Dialogflow) by following certified cloud engineers’ practices.
+                `}
               </p>
               <a className="btn btn-primary gap-2" href="/CV.pdf" download>
                 <svg
